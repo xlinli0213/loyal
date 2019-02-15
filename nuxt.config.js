@@ -1,3 +1,4 @@
+const path = require('path')
 const pkg = require('./package')
 
 module.exports = {
@@ -24,12 +25,12 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ['@/sass/index.scss'],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ['~plugins/global-components', '~plugins/svg-sprite-loader'],
 
   /*
   ** Nuxt.js modules
@@ -63,6 +64,25 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+
+      // Import scss
+      config.module.rules.push({
+        test: /\.scss/,
+        oneOf: [{ use: ['import-glob-loader2'] }],
+        enforce: 'pre'
+      })
+
+      // Generating an SVG Sprite Sheet
+      const urlLoader = config.module.rules.find(loader =>
+        loader.test.test('.svg')
+      )
+      urlLoader.exclude = [path.resolve(__dirname, './assets/icons')]
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        include: [path.resolve(__dirname, './assets/icons')],
+        use: 'svg-sprite-loader'
+      })
     }
   }
 }

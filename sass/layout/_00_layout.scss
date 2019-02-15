@@ -1,0 +1,97 @@
+// golbal
+.loyal {
+  display: flex;
+  background: $-theme-bg-grey;
+}
+
+// header
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  color: $-theme-font-white;
+  background: $-theme-bg-pink;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  width: 260px;
+  height: 100%;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+
+  .logo {
+    height: 100%;
+    margin-right: 10px;
+  }
+}
+
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
+  padding: 0 20px;
+
+  .icon {
+    height: 100%;
+    padding: 0 10px;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// main
+.main {
+  flex: 1;
+  margin-top: 70px;
+
+  // sidebar
+  .sidebar {
+    position: fixed;
+    width: 260px;
+    height: 1000px;
+    color: $-theme-font-grey;
+    background: $-theme-bg-black;
+  }
+
+  .sidebar__menu {
+    padding-bottom: 10px;
+
+    .title {
+      padding: 0 20px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      padding: 10px 25px;
+      cursor: pointer;
+
+      &:hover {
+        color: $-theme-font-white;
+        background: $-theme-bg-black-dark;
+      }
+    }
+
+    .icon {
+      margin-right: 20px;
+    }
+  }
+
+  // page
+  .page {
+    height: 1000px;
+    padding: 30px;
+    margin-left: 260px;
+    border: 30px solid $-theme-bg-grey;
+    background: $-theme-font-white;
+  }
+}
