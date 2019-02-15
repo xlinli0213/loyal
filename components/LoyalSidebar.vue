@@ -1,7 +1,9 @@
 <template>
   <div class="sidebar">
     <div v-for="(menu,index) in menuList" :key="index" class="sidebar__menu">
-      <h3 class="title">{{ menu.title }}</h3>
+      <h3 class="title">
+        {{ menu.title }}
+      </h3>
       <ul v-for="item in menu.items" :key="item.desc">
         <li class="item">
           <loyal-icon :name="item.icon" />{{ item.desc }}

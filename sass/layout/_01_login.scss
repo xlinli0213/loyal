@@ -1,0 +1,53 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: $-theme-font-white;
+  background: $-theme-bg-pink;
+}
+
+.login__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding: 50px;
+  color: $-theme-font-grey-light;
+  background: $-theme-font-white;
+
+  .form {
+    width: 100%;
+
+    p {
+      font-size: 12px;
+    }
+
+    input {
+      width: 100%;
+      padding: 5px;
+      border: none;
+    }
+  }
+
+  .btns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .btn {
+    width: 45%;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 3px;
+    color: $-theme-font-white;
+    background: $-theme-bg-pink;
+    cursor: pointer;
+  }
+}
