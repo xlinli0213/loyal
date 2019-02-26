@@ -10,7 +10,7 @@
       </div>
       <div class="user">
         welcome<loyal-icon name="exit" />
-      </div>     
+      </div>
     </div>
   </div>
 </template>

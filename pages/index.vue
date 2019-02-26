@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { auth } from '@/api/auth.js'
 export default {
   layout: 'TMobile',
   data() {
@@ -35,6 +36,9 @@ export default {
         ]
       }
     }
+  },
+  beforeMount() {
+    auth()
   }
 }
 </script>

@@ -20,6 +20,14 @@
   color: $-theme-font-grey-light;
   background: $-theme-font-white;
 
+  .error {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: $-theme-font-red;
+    background: $-theme-bg-red;
+  }
+
   .form {
     width: 100%;
 
